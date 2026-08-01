@@ -1,0 +1,75 @@
+// انتخاب آهنگ
+
+const songs = document.querySelectorAll(".song");
+const playButtons = document.querySelectorAll(".play");
+
+let selectedSong = 0;
+
+songs.forEach((song, index) => {
+
+    song.addEventListener("click", () => {
+
+        songs.forEach(s => s.classList.remove("active"));
+
+        song.classList.add("active");
+
+        selectedSong = index;
+
+    });
+
+});
+
+// فایل‌های آهنگ
+
+const music = [
+    "music/song1.mp3",
+    "music/song2.mp3",
+    "music/song3.mp3"
+];
+
+const player = new Audio();
+
+playButtons.forEach((button, index) => {
+
+    button.addEventListener("click", (e) => {
+
+        e.stopPropagation();
+
+        if (
+            player.src.includes(music[index]) &&
+            !player.paused
+        ) {
+
+            player.pause();
+            button.innerText = "▶ پخش";
+            return;
+
+        }
+
+        playButtons.forEach(btn => btn.innerText = "▶ پخش");
+
+        player.src = music[index];
+
+        player.play();
+
+        button.innerText = "⏸ توقف";
+
+    });
+
+});
+
+player.onended = () => {
+
+    playButtons.forEach(btn => btn.innerText = "▶ پخش");
+
+};
+
+// دکمه بریم
+
+document
+.getElementById("next")
+.addEventListener("click", () => {
+
+    alert("صفحه دوم رو توی مرحله بعد اضافه می‌کنیم 🤍");
+
+});
