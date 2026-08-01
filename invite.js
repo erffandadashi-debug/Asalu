@@ -1,4 +1,5 @@
 const noBtn = document.getElementById("no");
+const yesBtn = document.getElementById("yes");
 
 const messages = [
     "من که بهت گفتم فکرشم نکن(:",
@@ -11,25 +12,21 @@ let count = 0;
 
 noBtn.addEventListener("mouseenter", () => {
 
-    const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
-    const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+    const parent = noBtn.parentElement;
 
-    noBtn.style.position = "fixed";
-    noBtn.style.left = x + "px";
-    noBtn.style.top = y + "px";
+    const x = Math.random() * 120 - 60;
+    const y = Math.random() * 80 - 40;
+
+    noBtn.style.transform = `translate(${x}px, ${y}px)`;
 
 
-    const text = document.createElement("div");
+    const text = document.createElement("span");
 
     text.innerText = messages[count % messages.length];
 
-    text.style.position = "fixed";
-    text.style.fontSize = "12px";
-    text.style.color = "#888";
-    text.style.left = Math.random() * 80 + "%";
-    text.style.top = Math.random() * 80 + "%";
+    text.className = "no-message";
 
-    document.body.appendChild(text);
+    noBtn.parentElement.appendChild(text);
 
 
     count++;
@@ -37,8 +34,7 @@ noBtn.addEventListener("mouseenter", () => {
 });
 
 
-document.getElementById("yes")
-.addEventListener("click",()=>{
+yesBtn.addEventListener("click", () => {
 
     window.location.href = "date.html";
 
