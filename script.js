@@ -22,7 +22,7 @@ songs.forEach((song, index) => {
 // فایل‌های آهنگ
 
 const music = [
-    "music/song.mp3"
+    "music/Lana Del Rey – Born to Die.mp3"
 ];
 
 const player = new Audio();
