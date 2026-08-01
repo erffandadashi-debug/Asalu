@@ -1,4 +1,4 @@
-emailjs.init("PUBLIC_KEY");
+emailjs.init("ih63wIv-Gcdt6yBT6");
 
 
 document.getElementById("send")
@@ -21,8 +21,8 @@ return;
 
 
 emailjs.send(
-"SERVICE_ID",
-"TEMPLATE_ID",
+"iimnotERFF",
+"template_10luli7",
 {
 
 date: date,
