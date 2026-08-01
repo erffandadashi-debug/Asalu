@@ -46,13 +46,13 @@ playButtons.forEach((button, index) => {
 
         }
 
-        playButtons.forEach(btn => btn.innerText = "▶ پخش");
+        playButtons.forEach(btn => btn.innerText = "▶ ");
 
         player.src = music[index];
 
         player.play();
 
-        button.innerText = "⏸ توقف";
+        button.innerText = "⏸ ";
 
     });
 
@@ -68,8 +68,8 @@ player.onended = () => {
 
 document
 .getElementById("next")
-.addEventListener("click", () => {
+.addEventListener("click",()=>{
 
-    alert("صفحه دوم رو توی مرحله بعد اضافه می‌کنیم 🤍");
+    window.location.href = "invite.html";
 
 });
