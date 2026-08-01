@@ -22,9 +22,7 @@ songs.forEach((song, index) => {
 // فایل‌های آهنگ
 
 const music = [
-    "music/song1.mp3",
-    "music/song2.mp3",
-    "music/song3.mp3"
+    "music/song.mp3"
 ];
 
 const player = new Audio();
