@@ -1,0 +1,177 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Vazirmatn',sans-serif;
+
+    background:linear-gradient(135deg,#FFF9FB,#FDEEF4,#FFF5DC);
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#5C4D57;
+
+}
+
+.container{
+
+    width:90%;
+
+    max-width:500px;
+
+    margin:40px auto;
+
+    text-align:center;
+
+}
+
+h1{
+
+    font-size:34px;
+
+    margin-bottom:12px;
+
+    font-weight:700;
+
+}
+
+.subtitle{
+
+    color:#8b7c84;
+
+    margin-bottom:35px;
+
+    font-size:17px;
+
+}
+
+.songs{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.song{
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:18px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.06);
+
+    border:2px solid transparent;
+
+    transition:.25s;
+
+}
+
+.song.active{
+
+    border-color:#F2D56B;
+
+}
+
+.song img{
+
+    width:100%;
+
+    height:190px;
+
+    object-fit:cover;
+
+    border-radius:16px;
+
+    margin-bottom:15px;
+
+}
+
+.song h2{
+
+    font-size:22px;
+
+    margin-bottom:6px;
+
+}
+
+.song span{
+
+    color:#888;
+
+    display:block;
+
+    margin-bottom:16px;
+
+}
+
+.play{
+
+    width:100%;
+
+    border:none;
+
+    background:#FFF2C9;
+
+    padding:13px;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    transition:.25s;
+
+}
+
+.play:hover{
+
+    background:#FFEBA8;
+
+}
+
+#next{
+
+    margin-top:35px;
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:#F9DDE8;
+
+    color:#5C4D57;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+#next:hover{
+
+    transform:translateY(-2px);
+
+    background:#F6D0DF;
+
+}
